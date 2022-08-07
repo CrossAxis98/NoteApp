@@ -1,11 +1,11 @@
 package com.example.noteapp.data
 
 import com.example.noteapp.model.Note
+import com.google.android.gms.common.util.CollectionUtils.listOf
 
 class NotesDataSource {
     fun loadNotes(): List<Note> {
         return listOf(
-
             Note(title = "A good day", description = "We went on a vacation by the lake"),
             Note(title = "Android Compose", description = "Working on Android Compose course today"),
             Note(title = "Keep at it...", description = "Sometimes things just happen"),
