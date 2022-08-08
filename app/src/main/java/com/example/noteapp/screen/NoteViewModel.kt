@@ -27,13 +27,13 @@ class NoteViewModel @Inject constructor(
             repository.getAllNotes().distinctUntilChanged()
                 .collect{ listOfNotes ->
                     if (listOfNotes.isNullOrEmpty()) {
-                        Log.d("View Model", "Empty list")
+                        Log.d("View Model", "XXX Empty list")
+                        _noteList.value = emptyList()
                     } else {
                         _noteList.value = listOfNotes
                     }
                 }
         }
-        //noteList.addAll(NotesDataSource().loadNotes())
     }
 
     fun addNote(note: Note) = viewModelScope.launch { repository.addNote(note) }
