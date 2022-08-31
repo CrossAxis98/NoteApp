@@ -47,12 +47,3 @@ fun NotesApp(noteViewModel: NoteViewModel) {
         onRemoveNote = { note -> noteViewModel.removeNote(note) }
     )
 }
-
-@ExperimentalComposeUiApi
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    NoteAppTheme {
-
-    }
-}
